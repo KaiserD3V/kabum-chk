@@ -5,7 +5,7 @@ Checker de contas Kabum em python!
 Edite o arquivo .txt ``lista.txt`` com o formato de combo ``(email|senha)``
 
 **Exemplo:**
-- kplegal@gmail.com|senha123
+- ``kplegal@gmail.com|senha123``
 
 ## Requirements
 ``pip install requests``
