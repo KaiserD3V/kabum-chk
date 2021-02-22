@@ -5,7 +5,7 @@ import colorama
 from colorama import Fore, Back, Style
 colorama.init()
 
-a = open("lista.txt", "r")
+a = open("lista.txt", "r", encoding="utf8")
 
 file = [s.strip() for s in a.readlines()]
 
