@@ -1,4 +1,4 @@
-# kabum-chk
+# Kabum Checker
 Checker de contas Kabum em python!
 
 ## Como usar
